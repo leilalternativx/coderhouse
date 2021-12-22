@@ -1,0 +1,302 @@
+/**CSS BÁSICO **/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+	font-family: 'Ubuntu', sans-serif;
+	src: url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap);
+}
+
+::selection {
+    background-color: #a88beb;
+}
+
+html, body{
+    font-family: 'Ubuntu',sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #1a1a1a;
+}
+
+footer, header, main, section {
+    display: block
+}
+
+nav{
+    margin: 30px;
+    height: 80px;
+}
+
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+
+ul{
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    position:relative;
+    margin-right: 10px;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem
+}
+
+h3 {
+    font-size: 1.75rem
+}
+
+h4 {
+    font-size: 1.5rem
+}
+
+h5 {
+    font-size: 1.25rem
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+
+a {
+    color: #5de6de;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #a88beb;
+}
+
+img {
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/**FIN CSS BÁSICO **/
+
+/**MENU**/
+
+ul ul {
+    position: absolute;
+    display: none;
+    top: 20px;
+}
+
+ul ul li {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+li:hover{
+    color: #a88beb;
+    font-weight: bold;
+}
+
+ul li:hover ul {
+    display:block;
+    background-color: #fff;
+    width: 150px;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.45);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.menu-link { 
+    font-weight: 700;
+    color: #000;
+    box-sizing: border-box;
+    float: right;
+}
+
+.menu-link * {
+    box-sizing: border-box;
+}
+
+.menu-link li {
+    list-style: outside none none;
+    padding: 0;
+}
+.menu-link a {
+    padding: 0.5em 0;
+    font-weight: 700;
+    color: #000;
+    position: relative;
+    text-decoration: none;
+}
+
+.menu-link a:before,
+.menu-link a:after {
+    position: absolute;
+    transition: all 0.35s ease;
+}
+
+.menu-link a:before {
+    top: 0;
+    display: block;
+    height: 3px;
+    width: 0%;
+    content: "";
+    background: linear-gradient(90deg, rgba(168,139,235,1) 0%, rgba(93,230,222,1) 100%);
+}
+
+.menu-link a:after {
+    left: 0;
+    top: 0;
+    padding: 0.5em 0;
+    position: absolute;
+    content: attr(data-hover);
+    color: #a88beb;
+    white-space: nowrap;
+    max-width: 0%;
+    overflow: hidden;
+}
+
+.menu-link a:hover:before,
+.menu-link .current a:before {
+    opacity: 1;
+    width: 100%;
+}
+
+.menu-link a:hover:after,
+.menu-link .current a:after {
+    max-width: 100%;
+}
+
+ul.menu-link > li > a:active {
+    color: #a88beb;
+}
+
+/**FIN MENU**/
+
+/**ESTRUCTURA**/
+
+.container{
+    width: 100%;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1 0 0%;
+}
+/**FIN ESTRUCTURA**/
+
+.contenedor{
+    width: 90%;
+	margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+        "nav nav nav nav"
+        "slide slide slide slide"
+        "section section section section"
+        "footer footer footer footer";
+    gap: 10px;
+}
+
+.nav{
+    grid-area: nav;
+}
+
+.optionDrop{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.logo{
+    display: inline-block;
+}
+
+.icon{
+    margin-right: 10px;
+}
+
+.topheader{
+    background: linear-gradient(90deg, rgba(168,139,235,1) 0%, rgba(93,230,222,1) 100%);
+    color: #fff;
+    z-index: 99;
+    height: 35px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+.textCenter{
+    text-align: center;
+}
+
+.btn1{
+    background-color: #5de6de;
+    box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.45);
+    border-radius: 10px 10px 10px 10px;
+    color: #fff;
+    font-weight: 700;
+    padding: 16px;
+    font-size: 20px;
+    font-family: 'Ubuntu';
+    border: none;
+}
+
+.btn1:hover{
+    background-color: #a88beb;
+}
+
+.ml{
+    margin-left: 30px;
+}
+
+@media (min-width: 360px) {
+    .container {
+    max-width: 310px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+    max-width: 720px;
+    }
+}
+
+@media (min-width: 1160px) {
+    .container {
+    max-width: 960px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+    max-width: 1560px;
+    }
+}
