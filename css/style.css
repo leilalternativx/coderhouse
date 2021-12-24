@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
 
 h2 {
@@ -210,24 +210,6 @@ ul.menu-link > li > a:active {
 }
 /**FIN ESTRUCTURA**/
 
-.contenedor{
-    width: 90%;
-	margin: 20px auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(3, auto);
-    grid-template-areas: 
-        "nav nav nav nav"
-        "slide slide slide slide"
-        "section section section section"
-        "footer footer footer footer";
-    gap: 10px;
-}
-
-.nav{
-    grid-area: nav;
-}
-
 .optionDrop{
     margin-top: 10px;
     margin-bottom: 10px;
@@ -257,6 +239,14 @@ ul.menu-link > li > a:active {
     text-align: center;
 }
 
+.bg-line{
+    background-image: url(/media/img/details/bg-line.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
 .btn1{
     background-color: #5de6de;
     box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.45);
@@ -275,6 +265,100 @@ ul.menu-link > li > a:active {
 
 .ml{
     margin-left: 30px;
+}
+
+.m-50{
+    margin-top: 80px;
+    height: 100px;
+}
+
+.carousel-caption {
+    position: absolute; 
+    top: 125px; /* Cambiar bottom por top y los píxeles que necesites */
+    left: 10%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #000;
+    text-align: left;
+}
+
+.icon-w{
+    color: #fff;
+}
+
+.underline span {
+    display: inline-block;
+}
+
+.underline span::after{
+    content: '';
+    height: 7px;
+    width: 60%;
+    background: linear-gradient(90deg, rgba(168,139,235,1) 0%, rgba(93,230,222,1) 100%);
+    border-radius: 5px;
+    display: block
+}
+
+.arrow-d {
+position: absolute;
+margin-top: 13px;
+}
+.btn-down{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: solid;
+    border: 0px;
+    background-color: #a88beb;
+    position: absolute;
+    left: 50%;
+    margin: -30px;
+    box-shadow: -2px 6px 18px -2px rgb(0 0 0 / 45%);
+}
+
+.arrow {
+    text-align: center;
+    margin: 8% 0;
+}
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+.section-m{
+    margin-top: 50px;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+
+
+
+
+
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
 }
 
 @media (min-width: 360px) {
