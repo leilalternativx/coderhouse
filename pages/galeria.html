@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--CSS-->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!---->
     <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="./media/favicon.ico">
+    <link rel="icon" href="/media/favicon.ico">
     <title>Proyecto Portfolio</title>
 </head>
 <body>
@@ -23,19 +23,19 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <img src="./media/img/logo.png" alt="logotipo" class="logo">
+                            <img src="/media/img/logo.png" alt="logotipo" class="logo">
                         </div>
                         <div class="col-md-9">
                             <ul class="menu-link">
                                     <li><a href="../index.html">Home</a></li>
-                                    <li><a href="./pages/galeria.html"><img src="./media/img/gallery.png" class="icon" alt="icon galeria">Galeria</a>
+                                    <li><a href="/pages/galeria.html"><img src="/media/img/gallery.png" class="icon" alt="icon galeria">Galeria</a>
                                     <ul>
-                                        <li><a class="" href="./pages/galeria.html">Categoria 1</a></li>
-                                        <li><a class="" href="./pages/galeria.html#category2">Categoria 2</a></li>
-                                        <li><a class="" href="./pages/galeria.html#category3">Categoria 3</a></li>
+                                        <li><a class="" href="/pages/galeria.html">Categoria 1</a></li>
+                                        <li><a class="" href="/pages/galeria.html#category2">Categoria 2</a></li>
+                                        <li><a class="" href="/pages/galeria.html#category3">Categoria 3</a></li>
                                     </ul>
                                     </li>
-                                    <li><a href="./pages/contacto.html"><img src="./media/img/contact.png" class="icon" alt="icon galeria">Contacto</a></li>
+                                    <li><a href="/pages/contacto.html"><img src="/media/img/contact.png" class="icon" alt="icon galeria">Contacto</a></li>
                             </ul>
                         </div>
                     </div>
@@ -45,12 +45,12 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-md-4"><h1>
+                <div class="col-md-6"><h1>
                     Lorem ipsum dolor sit amet consectetur
                 </h1>
                 </div>
                 <div class="col-md-6">
-                    <img src="./media/img/home/banner.png" alt="banner animado">
+                    <img src="/media/img/home/banner.png" alt="banner animado">
                 </div>
             </div>
         </div>
@@ -61,45 +61,60 @@
             </div>
         </button>
     </main>
-    <section>
+    <section class="section-m">
         <div class="container">
             <h2>
                 Lorem ipsum dolor sit amet
             </h2>
             <div>
-                <button><a href="./pages/galeria.html#category1">Category1</a></button>
-                <button><a href="./pages/galeria.html#category2">Category2</a></button>
-                <button><a href="./pages/galeria.html#category3">Category3</a></button>
-                <button><a href="./pages/galeria.html#category4">Category4</a></button>
-                <button><a href="./pages/galeria.html#category5">Category5</a></button>
-                <button><a href="./pages/galeria.html#category6">Category6</a></button>
+                <button class="btn-category"><a href="/pages/galeria.html#category1">Category1</a></button>
+                <button class="btn-category"><a href="/pages/galeria.html#category2">Category2</a></button>
+                <button class="btn-category"><a href="/pages/galeria.html#category3">Category3</a></button>
+                <button class="btn-category"><a href="/pages/galeria.html#category4">Category4</a></button>
+                <button class="btn-category"><a href="/pages/galeria.html#category5">Category5</a></button>
+                <button class="btn-category"><a href="/pages/galeria.html#category6">Category6</a></button>
             </div>
-            <div class="row">
+            <div class="row section-m">
                 <div class="col-md-3">
                     <div id="category1">
-                        <img src="./media/img/home/img.jpg" alt="img category">
-                        <p>
+                        <img src="/media/img/home/img.jpg" alt="img category">
+                        <p class="mt-5">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ea culpa eos ab perspiciatis provident quisquam repudiandae ad suscipit porro doloribus sunt labore at maxime nemo, dignissimos, unde, odit aperiam.
                         </p>
-                        <button><a href="detalle.html">Ver más 👀</a></button>
+                        <button class="btn-view">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span> Ver más 👀
+                        </button>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div id="category2">
-                    <img src="./media/img/home/img.jpg" alt="img category">
-                    <p>
+                    <img src="/media/img/home/img.jpg" alt="img category">
+                    <p class="mt-5">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ea culpa eos ab perspiciatis provident quisquam repudiandae ad suscipit porro doloribus sunt labore at maxime nemo, dignissimos, unde, odit aperiam.
                     </p>
-                    <button><a href="detalle.html">Ver más 👀</a></button>
+                    <button class="btn-view">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Ver más 👀
+                    </button>
                 </div>
             </div>
                 <div class="col-md-3">
                     <div id="category3">
-                        <img src="./media/img/home/img.jpg" alt="img category">
-                        <p>
+                        <img src="/media/img/home/img.jpg" alt="img category">
+                        <p class="mt-5">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ea culpa eos ab perspiciatis provident quisquam repudiandae ad suscipit porro doloribus sunt labore at maxime nemo, dignissimos, unde, odit aperiam.
                         </p>
-                        <button><a href="./pages/detalle.html">Ver más 👀</a></button>
+                        <button class="btn-view">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span> Ver más 👀
+                        </button>
                     </div>
                 </div>
             </div>
@@ -109,13 +124,13 @@
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-md-2">
-                    <img src="./media/img/logo.png" alt="logo">
+                    <img src="/media/img/logo.png" alt="logo">
                 </div>
                 <div class="col-md-4 textCenter">
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="./pages/galeria.html">Galeria</a>
-                        <li><a href="./pages/contacto.html">Contacto</a>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="/pages/galeria.html">Galeria</a>
+                        <li><a href="/pages/contacto.html">Contacto</a>
                     </ul>
                 </div>
                 <div class="col-md-4 textCenter">
@@ -129,7 +144,7 @@
         </div>
     </footer>
     <div class="topheader"></div>
-<script src="./js/bootstrap.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
 <!-- Awesome fonts -->
 <script src="https://kit.fontawesome.com/d7739a3e59.js" crossorigin="anonymous"></script>
 </body>
