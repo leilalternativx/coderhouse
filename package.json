@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "bootstrap": "^5.1.3",
+    "bootstrap.min.js": "^5.1.3"
+  },
+  "name": "y",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/css/style.css css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leilalternativx/leila-micaela-iglesias-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leilalternativx/leila-micaela-iglesias-portfolio/issues"
+  },
+  "homepage": "https://github.com/leilalternativx/leila-micaela-iglesias-portfolio#readme"
+}
