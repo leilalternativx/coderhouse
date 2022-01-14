@@ -1,0 +1,89 @@
+// UL
+$color-lila: #a88beb;
+$color-cian: #5de6de;
+
+ul {
+    ul {
+        position: absolute;
+        display: none;
+        top: 20px;
+    }
+}
+
+ul {
+    ul {
+        li {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+        }
+    }
+}
+
+li:hover {
+    color: $color-lila;
+    font-weight: bold;
+}
+
+ul {
+    li:hover ul {
+        display: block;
+        background-color: $color-lila;
+        width: 150px;
+        height: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-shadow: 5px 5px 10px -5px $color-cian;
+        border-radius: 10px 10px 10px 10px;
+    }
+}
+
+$theme-colors: map-merge(
+    (
+        "Primary": #a88beb,
+        "Secondary": #5de6de,
+        "Tertiary": #1a1a1a,
+        "White": #fff,
+        "Black": #000,
+    ),
+    $theme-colors
+);
+
+p {
+    color: map-get($theme-colors, Tertiary);
+}
+
+.btn-detalle {
+    position: relative;
+    padding: 1em 2em;
+    outline: none;
+    border: 1px solid $color-lila;
+    background: $color-lila;
+    color: map-get($theme-colors, white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 17px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-next .btn-previous {
+    @extend .btn-detalle;
+    background-color: $color-cian;
+    border: 1px solid $color-cian;
+}
+
+@mixin dispo {
+    display: inline-block;
+    position: relative;
+}
+
+li {
+    @include dispo;
+    margin-right: 10px;
+}
