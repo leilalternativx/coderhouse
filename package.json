@@ -7,7 +7,7 @@
     "nodemon": "^2.0.15"
   },
   "name": "Leila Micaela Iglesias",
-  "description": "",
+  "description": "Proyecto de portfolio",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
