@@ -7,7 +7,7 @@
 }
 
 @font-face {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     src: url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap);
 }
 
@@ -17,7 +17,7 @@
 
 html,
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-size: 1rem;
     color: #1a1a1a;
@@ -27,7 +27,7 @@ footer,
 header,
 main,
 section {
-    display: block
+    display: block;
 }
 
 nav {
@@ -38,7 +38,7 @@ nav {
 ol,
 ul {
     margin-top: 0;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
 }
 
 ul {
@@ -57,7 +57,7 @@ h3,
 h4,
 h5 {
     margin-top: 0;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 h1 {
@@ -65,24 +65,24 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem
+    font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.75rem
+    font-size: 1.75rem;
 }
 
 h4 {
-    font-size: 1.5rem
+    font-size: 1.5rem;
 }
 
 h5 {
-    font-size: 1.25rem
+    font-size: 1.25rem;
 }
 
 p {
     margin-top: 0;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
 }
 
 a {
@@ -171,7 +171,11 @@ ul li:hover ul {
     height: 3px;
     width: 0%;
     content: "";
-    background: linear-gradient(90deg, rgba(168, 139, 235, 1) 0%, rgba(93, 230, 222, 1) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(168, 139, 235, 1) 0%,
+        rgba(93, 230, 222, 1) 100%
+    );
 }
 
 .menu-link a:after {
@@ -197,7 +201,7 @@ ul li:hover ul {
     max-width: 100%;
 }
 
-ul.menu-link>li>a:active {
+ul.menu-link > li > a:active {
     color: #a88beb;
 }
 
@@ -212,7 +216,7 @@ ul.menu-link>li>a:active {
     font-weight: 700;
     padding: 16px;
     font-size: 20px;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu";
     border: none;
 }
 
@@ -248,7 +252,6 @@ ul.menu-link>li>a:active {
 }
 
 @keyframes bounce {
-
     0%,
     20%,
     50%,
@@ -284,7 +287,7 @@ btn-category {
 }
 
 .btn-category:hover {
-    background-color: rgb(219, 219, 219)
+    background-color: rgb(219, 219, 219);
 }
 
 a,
@@ -381,11 +384,14 @@ btn-category :hover {
     transition: 0.1s;
 }
 
-.btn-view:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-child(2) {
+.btn-view:active
+    span:nth-child(1)
+    span:nth-child(2)
+    span:nth-child(2)
+    span:nth-child(2) {
     transition: none;
     transition-delay: none;
 }
-
 
 .btn-main {
     background: linear-gradient(-45deg, #a88beb, #9f69fe, #27c8b7, #3f00b5);
@@ -397,8 +403,8 @@ btn-category :hover {
     font-size: 17px;
     font-weight: 700;
     color: white;
-    transition: all .5s ease-in-out;
-    animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+    transition: all 0.5s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(0.62, 0.28, 0.23, 0.99) both;
 }
 
 .btn-main:hover {
@@ -425,7 +431,91 @@ btn-category :hover {
     }
 }
 
+.send-btn {
+    font-family: inherit;
+    font-size: 20px;
+    background: linear-gradient(
+        90deg,
+        rgba(168, 139, 235, 1) 0%,
+        rgba(93, 230, 222, 1) 100%
+    );
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.send-btn span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+.send-btn svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.send-btn:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.send-btn:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.send-btn:hover span {
+    transform: translateX(5em);
+}
+
+.send-btn:active {
+    transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.1em);
+    }
+
+    to {
+        transform: translateY(-0.1em);
+    }
+}
+
+.form-btn {
+    color: #fff;
+    background-color: #5de6de;
+    border: solid 2px;
+    font-weight: 600;
+}
+
+.form-s {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
 /*End Buttons options*/
+
+.a-footer {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.a-footer:hover {
+    color: #a88beb;
+    text-decoration: none;
+}
+
+.pt {
+    padding-top: 20px;
+}
 
 .optionDrop {
     margin-top: 10px;
@@ -443,7 +533,11 @@ btn-category :hover {
 }
 
 .topheader {
-    background: linear-gradient(90deg, rgba(168, 139, 235, 1) 0%, rgba(93, 230, 222, 1) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(168, 139, 235, 1) 0%,
+        rgba(93, 230, 222, 1) 100%
+    );
     color: #fff;
     z-index: 99;
     height: 35px;
@@ -463,7 +557,6 @@ btn-category :hover {
     background-position: center;
 }
 
-
 .ml {
     margin-left: 30px;
 }
@@ -482,14 +575,25 @@ btn-category :hover {
 }
 
 .underline span::after {
-    content: '';
+    content: "";
     height: 7px;
     width: 60%;
-    background: linear-gradient(90deg, rgba(168, 139, 235, 1) 0%, rgba(93, 230, 222, 1) 100%);
+    background: linear-gradient(
+        90deg,
+        rgba(168, 139, 235, 1) 0%,
+        rgba(93, 230, 222, 1) 100%
+    );
     border-radius: 5px;
-    display: block
+    display: block;
 }
 
+.g-color {
+    color: #5de6de;
+}
+
+.g-color:hover {
+    color: #a88beb;
+}
 .section-m {
     margin-top: 50px;
 }
@@ -505,6 +609,11 @@ btn-category :hover {
     white-space: nowrap;
     background-color: transparent;
     border: 0;
+}
+
+.logo-mini {
+    width: 60%;
+    height: auto;
 }
 
 @media (min-width: 360px) {
@@ -530,4 +639,3 @@ btn-category :hover {
         max-width: 1560px;
     }
 }
-

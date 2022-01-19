@@ -1,6 +1,18 @@
-// UL
+$theme-colors: map-merge(
+    (
+        "Primary": #a88beb,
+        "Secondary": #5de6de,
+        "Tertiary": #1a1a1a,
+        "White": #fff,
+        "Black": #000,
+    ),
+    $theme-colors
+);
+
+// COLORES Principales
 $color-lila: #a88beb;
 $color-cian: #5de6de;
+$ubuntu: "Ubuntu", sans-serif;
 
 ul {
     ul {
@@ -39,17 +51,6 @@ ul {
         border-radius: 10px 10px 10px 10px;
     }
 }
-
-$theme-colors: map-merge(
-    (
-        "Primary": #a88beb,
-        "Secondary": #5de6de,
-        "Tertiary": #1a1a1a,
-        "White": #fff,
-        "Black": #000,
-    ),
-    $theme-colors
-);
 
 p {
     color: map-get($theme-colors, Tertiary);
