@@ -1,0 +1,102 @@
+/*MENU*/
+ul ul {
+    position: absolute;
+    display: none;
+    top: 20px;
+}
+
+ul ul li {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+li:hover {
+    color: #a88beb;
+    font-weight: bold;
+}
+
+ul li:hover ul {
+    display: block;
+    background-color: #fff;
+    width: 150px;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.45);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.menu-link {
+    font-weight: 700;
+    color: #000;
+    box-sizing: border-box;
+    float: right;
+}
+
+.menu-link * {
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.menu-link li {
+    list-style: outside none none;
+    padding: 0;
+}
+
+.menu-link a {
+    padding: 0.5em 0;
+    font-weight: 700;
+    color: #000;
+    position: relative;
+    text-decoration: none;
+}
+
+.menu-link a:before,
+.menu-link a:after {
+    position: absolute;
+    transition: all 0.35s ease;
+}
+
+.menu-link a:before {
+    top: 0;
+    display: block;
+    height: 3px;
+    width: 0%;
+    content: "";
+    background: linear-gradient(
+        90deg,
+        rgba(168, 139, 235, 1) 0%,
+        rgba(93, 230, 222, 1) 100%
+    );
+}
+
+.menu-link a:after {
+    left: 0;
+    top: 0;
+    padding: 0.5em 0;
+    position: absolute;
+    content: attr(data-hover);
+    color: #a88beb;
+    white-space: nowrap;
+    max-width: 0%;
+    overflow: hidden;
+}
+
+.menu-link a:hover:before,
+.menu-link .current a:before {
+    opacity: 1;
+    width: 100%;
+}
+
+.menu-link a:hover:after,
+.menu-link .current a:after {
+    max-width: 100%;
+}
+
+ul.menu-link > li > a:active {
+    color: #a88beb;
+}
+/*End Menu*/

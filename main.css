@@ -1,0 +1,641 @@
+/*CSS basic */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Ubuntu", sans-serif;
+    src: url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap);
+}
+
+::selection {
+    background-color: #a88beb;
+}
+
+html,
+body {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #1a1a1a;
+}
+
+footer,
+header,
+main,
+section {
+    display: block;
+}
+
+nav {
+    margin: 30px;
+    height: 80px;
+}
+
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #5de6de;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #a88beb;
+}
+
+img {
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/*End basic CSS*/
+
+/*MENU*/
+ul ul {
+    position: absolute;
+    display: none;
+    top: 20px;
+}
+
+ul ul li {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+li:hover {
+    color: #a88beb;
+    font-weight: bold;
+}
+
+ul li:hover ul {
+    display: block;
+    background-color: #fff;
+    width: 150px;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.45);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.menu-link {
+    font-weight: 700;
+    color: #000;
+    box-sizing: border-box;
+    float: right;
+}
+
+.menu-link * {
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.menu-link li {
+    list-style: outside none none;
+    padding: 0;
+}
+
+.menu-link a {
+    padding: 0.5em 0;
+    font-weight: 700;
+    color: #000;
+    position: relative;
+    text-decoration: none;
+}
+
+.menu-link a:before,
+.menu-link a:after {
+    position: absolute;
+    transition: all 0.35s ease;
+}
+
+.menu-link a:before {
+    top: 0;
+    display: block;
+    height: 3px;
+    width: 0%;
+    content: "";
+    background: linear-gradient(
+        90deg,
+        rgba(168, 139, 235, 1) 0%,
+        rgba(93, 230, 222, 1) 100%
+    );
+}
+
+.menu-link a:after {
+    left: 0;
+    top: 0;
+    padding: 0.5em 0;
+    position: absolute;
+    content: attr(data-hover);
+    color: #a88beb;
+    white-space: nowrap;
+    max-width: 0%;
+    overflow: hidden;
+}
+
+.menu-link a:hover:before,
+.menu-link .current a:before {
+    opacity: 1;
+    width: 100%;
+}
+
+.menu-link a:hover:after,
+.menu-link .current a:after {
+    max-width: 100%;
+}
+
+ul.menu-link > li > a:active {
+    color: #a88beb;
+}
+
+/*End MENU*/
+
+/* BUTTONS OPTIONS */
+.btn1 {
+    background-color: #5de6de;
+    box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.45);
+    border-radius: 10px 10px 10px 10px;
+    color: #fff;
+    font-weight: 700;
+    padding: 16px;
+    font-size: 20px;
+    font-family: "Ubuntu";
+    border: none;
+}
+
+.btn1:hover {
+    background-color: #a88beb;
+}
+
+.arrow-d {
+    position: absolute;
+    margin-top: 13px;
+}
+
+.btn-down {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: solid;
+    border: 0px;
+    background-color: #a88beb;
+    position: absolute;
+    left: 50%;
+    margin: -30px;
+    box-shadow: -2px 6px 18px -2px rgb(0 0 0 / 45%);
+}
+
+.arrow {
+    text-align: center;
+    margin: 8% 0;
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.btn-category {
+    height: 40px;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+    background-color: #5de6de;
+    margin-right: 20px;
+}
+
+a,
+btn-category {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-category:hover {
+    background-color: rgb(219, 219, 219);
+}
+
+a,
+btn-category :hover {
+    color: #fff;
+}
+
+.btn-view {
+    position: relative;
+    padding: 1em 2em;
+    outline: none;
+    border: 1px solid #a88beb;
+    background: #a88beb;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 17px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-view:hover {
+    box-shadow: 0 0 10px #a88beb, 0 0 25px #5de6de, 0 0 50px #a88beb;
+    transition-delay: 0.6s;
+}
+
+.btn-view span {
+    position: absolute;
+}
+
+.btn-view span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #a88beb);
+}
+
+.btn-view:hover span:nth-child(1) {
+    left: 100%;
+    transition: 0.7s;
+}
+
+.btn-view span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #5de6de);
+}
+
+.btn-view:hover span:nth-child(3) {
+    right: 100%;
+    transition: 0.7s;
+    transition-delay: 0.35s;
+}
+
+.btn-view span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #a88beb);
+}
+
+.btn-view:hover span:nth-child(2) {
+    top: 100%;
+    transition: 0.7s;
+    transition-delay: 0.17s;
+}
+
+.btn-view span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #5de6de);
+}
+
+.btn-view:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 0.7s;
+    transition-delay: 0.52s;
+}
+
+.btn-view:active {
+    background: #a88beb;
+    background: linear-gradient(to top right, #a88beb, #5de6de);
+    color: #bfbfbf;
+    box-shadow: 0 0 8px #a88beb, 0 0 8px #5de6de, 0 0 8px #a88beb;
+    transition: 0.1s;
+}
+
+.btn-view:active
+    span:nth-child(1)
+    span:nth-child(2)
+    span:nth-child(2)
+    span:nth-child(2) {
+    transition: none;
+    transition-delay: none;
+}
+
+.btn-main {
+    background: linear-gradient(-45deg, #a88beb, #9f69fe, #27c8b7, #3f00b5);
+    background-size: 800% 400%;
+    padding: 1em 2em;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(0.62, 0.28, 0.23, 0.99) both;
+}
+
+.btn-main:hover {
+    animation: gradient 3s infinite;
+    transform: scale(1.05);
+}
+
+.btn-main:active {
+    animation: gradient 3s infinite;
+    transform: scale(0.8);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.send-btn {
+    font-family: inherit;
+    font-size: 20px;
+    background: linear-gradient(
+        90deg,
+        rgba(168, 139, 235, 1) 0%,
+        rgba(93, 230, 222, 1) 100%
+    );
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.send-btn span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+}
+
+.send-btn svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.send-btn:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.send-btn:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.send-btn:hover span {
+    transform: translateX(5em);
+}
+
+.send-btn:active {
+    transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.1em);
+    }
+
+    to {
+        transform: translateY(-0.1em);
+    }
+}
+
+.form-btn {
+    color: #fff;
+    background-color: #5de6de;
+    border: solid 2px;
+    font-weight: 600;
+}
+
+.form-s {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+/*End Buttons options*/
+
+.a-footer {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.a-footer:hover {
+    color: #a88beb;
+    text-decoration: none;
+}
+
+.pt {
+    padding-top: 20px;
+}
+
+.optionDrop {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.topheader {
+    background: linear-gradient(
+        90deg,
+        rgba(168, 139, 235, 1) 0%,
+        rgba(93, 230, 222, 1) 100%
+    );
+    color: #fff;
+    z-index: 99;
+    height: 35px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.bg-line {
+    background-image: url(/media/img/details/bg-line.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ml {
+    margin-left: 30px;
+}
+
+.m-50 {
+    margin-top: 80px;
+    height: 100px;
+}
+
+.icon-w {
+    color: #fff;
+}
+
+.underline span {
+    display: inline-block;
+}
+
+.underline span::after {
+    content: "";
+    height: 7px;
+    width: 60%;
+    background: linear-gradient(
+        90deg,
+        rgba(168, 139, 235, 1) 0%,
+        rgba(93, 230, 222, 1) 100%
+    );
+    border-radius: 5px;
+    display: block;
+}
+
+.g-color {
+    color: #5de6de;
+}
+
+.g-color:hover {
+    color: #a88beb;
+}
+.section-m {
+    margin-top: 50px;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.logo-mini {
+    width: 60%;
+    height: auto;
+}
+
+@media (min-width: 360px) {
+    .container {
+        max-width: 310px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 1160px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1560px;
+    }
+}
