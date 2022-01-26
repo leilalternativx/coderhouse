@@ -1,3 +1,5 @@
+@import "animate.css";
+
 //Theme Color
 $lila: #a88beb;
 $cyan: #5de6de;
@@ -20,54 +22,55 @@ $shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.45);
 
 //Basic
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: "Ubuntu", sans-serif;
-    src: url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap);
+  font-family: "Ubuntu", sans-serif;
+  src: url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap);
 }
 
 ::selection {
-    background-color: $lila;
+  background-color: $lila;
 }
 
 html,
 body {
-    font-family: $ubuntu;
-    font-weight: $regular;
-    font-size: 1rem;
-    color: $dark-gray;
+  font-family: $ubuntu;
+  font-weight: $regular;
+  font-size: 1rem;
+  color: $dark-gray;
+  accent-color: $lila;
 }
 
 footer,
 header,
 main,
 section {
-    display: block;
+  display: block;
 }
 
 nav {
-    margin: 30px;
-    height: 80px;
+  margin: 30px;
+  height: 80px;
 }
 
 ol,
 ul {
-    margin-top: 0;
-    margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 li {
-    display: inline-block;
-    position: relative;
-    margin-right: 10px;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
 }
 
 h1,
@@ -75,425 +78,425 @@ h2,
 h3,
 h4,
 h5 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
 }
 
 h1 {
-    font-size: 3.5rem;
+  font-size: 3.5rem;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.75rem;
+  font-size: 1.75rem;
 }
 
 h4 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 h5 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 p {
-    margin-top: 0;
-    margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 img {
-    border-style: none;
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
+  border-style: none;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
 a {
-    color: $cyan;
-    text-decoration: none;
-    &:hover {
-        color: $lila;
-    }
+  color: $cyan;
+  text-decoration: none;
+  &:hover {
+    color: $lila;
+  }
 }
 
 //BUTTONS
 .btn1 {
-    background-color: $cyan;
-    box-shadow: $shadow;
-    border-radius: 10px 10px 10px 10px;
-    color: $white;
-    font-weight: $bold;
-    padding: 16px;
-    font-size: 20px;
-    font-family: $ubuntu;
-    border: none;
-    &:hover {
-        background-color: $lila;
-    }
+  background-color: $cyan;
+  box-shadow: $shadow;
+  border-radius: 10px 10px 10px 10px;
+  color: $white;
+  font-weight: $bold;
+  padding: 16px;
+  font-size: 20px;
+  font-family: $ubuntu;
+  border: none;
+  &:hover {
+    background-color: $lila;
+  }
 }
 
 .arrow-d {
-    position: absolute;
-    margin-top: 13px;
+  position: absolute;
+  margin-top: 13px;
 }
 
 .btn-down {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    border: solid;
-    border: 0px;
-    background-color: $lila;
-    position: absolute;
-    left: 50%;
-    margin: -30px;
-    box-shadow: $shadow;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: solid;
+  border: 0px;
+  background-color: $lila;
+  position: absolute;
+  left: 50%;
+  margin: -30px;
+  box-shadow: $shadow;
 }
 
 .arrow {
-    text-align: center;
-    margin: 8% 0;
+  text-align: center;
+  margin: 8% 0;
 }
 
 .bounce {
-    animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
 
-    40% {
-        transform: translateY(-30px);
-    }
+  40% {
+    transform: translateY(-30px);
+  }
 
-    60% {
-        transform: translateY(-15px);
-    }
+  60% {
+    transform: translateY(-15px);
+  }
 }
 
 .btn-category {
-    height: 40px;
-    width: fit-content;
-    padding: 8px;
-    border-radius: 20px;
-    border: none;
-    font-weight: $medium;
-    background-color: $cyan;
-    margin-right: 20px;
-    a,
-    btn-category {
-        color: $white;
-        text-decoration: none;
-    }
-    &:hover {
-        background-color: $white;
-    }
-    a,
-    btn-category &:hover {
-        color: $white;
-    }
+  height: 40px;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  font-weight: $medium;
+  background-color: $cyan;
+  margin-right: 20px;
+  a,
+  btn-category {
+    color: $white;
+    text-decoration: none;
+  }
+  &:hover {
+    background-color: $white;
+  }
+  a,
+  btn-category &:hover {
+    color: $white;
+  }
 }
 
 .btn-view {
-    position: relative;
-    padding: 1em 2em;
-    outline: none;
-    border: 1px solid $lila;
+  position: relative;
+  padding: 1em 2em;
+  outline: none;
+  border: 1px solid $lila;
+  background: $lila;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 17px;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: $bold;
+  &:hover {
+    box-shadow: 0 0 10px $lila, 0 0 25px $cyan, 0 0 50px $lila;
+    transition-delay: 0.6s;
+  }
+  span {
+    position: absolute;
+    &:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, $lila);
+    }
+  }
+  &:hover span:nth-child(1) {
+    left: 100%;
+    transition: 0.7s;
+  }
+  span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, $cyan);
+  }
+  &:hover span:nth-child(3) {
+    right: 100%;
+    transition: 0.7s;
+    transition-delay: 0.35s;
+  }
+  span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, $lila);
+  }
+  &:hover span:nth-child(2) {
+    top: 100%;
+    transition: 0.7s;
+    transition-delay: 0.17s;
+  }
+  span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, $cyan);
+  }
+  &:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 0.7s;
+    transition-delay: 0.52s;
+  }
+  &:active {
     background: $lila;
-    color: $white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 17px;
-    overflow: hidden;
-    transition: 0.2s;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: $bold;
-    &:hover {
-        box-shadow: 0 0 10px $lila, 0 0 25px $cyan, 0 0 50px $lila;
-        transition-delay: 0.6s;
-    }
-    span {
-        position: absolute;
-        &:nth-child(1) {
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, $lila);
-        }
-    }
-    &:hover span:nth-child(1) {
-        left: 100%;
-        transition: 0.7s;
-    }
-    span:nth-child(3) {
-        bottom: 0;
-        right: -100%;
-        width: 100%;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, $cyan);
-    }
-    &:hover span:nth-child(3) {
-        right: 100%;
-        transition: 0.7s;
-        transition-delay: 0.35s;
-    }
+    background: $gradient;
+    color: #bfbfbf;
+    box-shadow: 0 0 8px $lila, 0 0 8px $cyan, 0 0 8px $lila;
+    transition: 0.1s;
+  }
+  &:active
+    span:nth-child(1)
+    span:nth-child(2)
+    span:nth-child(2)
     span:nth-child(2) {
-        top: -100%;
-        right: 0;
-        width: 2px;
-        height: 100%;
-        background: linear-gradient(180deg, transparent, $lila);
-    }
-    &:hover span:nth-child(2) {
-        top: 100%;
-        transition: 0.7s;
-        transition-delay: 0.17s;
-    }
-    span:nth-child(4) {
-        bottom: -100%;
-        left: 0;
-        width: 2px;
-        height: 100%;
-        background: linear-gradient(360deg, transparent, $cyan);
-    }
-    &:hover span:nth-child(4) {
-        bottom: 100%;
-        transition: 0.7s;
-        transition-delay: 0.52s;
-    }
-    &:active {
-        background: $lila;
-        background: $gradient;
-        color: #bfbfbf;
-        box-shadow: 0 0 8px $lila, 0 0 8px $cyan, 0 0 8px $lila;
-        transition: 0.1s;
-    }
-    &:active
-        span:nth-child(1)
-        span:nth-child(2)
-        span:nth-child(2)
-        span:nth-child(2) {
-        transition: none;
-        transition-delay: none;
-    }
+    transition: none;
+    transition-delay: none;
+  }
 }
 
 .btn-main {
-    background: linear-gradient(-45deg, $lila, #9f69fe, #27c8b7, #3f00b5);
-    background-size: 800% 400%;
-    padding: 1em 2em;
-    display: inline-block;
-    border: none;
-    border-radius: 10px;
-    font-size: 17px;
-    font-weight: $bold;
-    color: white;
-    transition: all 0.5s ease-in-out;
-    animation: gradient 10s infinite cubic-bezier(0.62, 0.28, 0.23, 0.99) both;
-    &:hover {
-        animation: gradient 3s infinite;
-        transform: scale(1.05);
+  background: linear-gradient(-45deg, $lila, #9f69fe, #27c8b7, #3f00b5);
+  background-size: 800% 400%;
+  padding: 1em 2em;
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: $bold;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  animation: gradient 10s infinite cubic-bezier(0.62, 0.28, 0.23, 0.99) both;
+  &:hover {
+    animation: gradient 3s infinite;
+    transform: scale(1.05);
+  }
+  &:active {
+    animation: gradient 3s infinite;
+    transform: scale(0.8);
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
     }
-    &:active {
-        animation: gradient 3s infinite;
-        transform: scale(0.8);
-    }
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
 
-        50% {
-            background-position: 100% 50%;
-        }
+    50% {
+      background-position: 100% 50%;
+    }
 
-        100% {
-            background-position: 0% 50%;
-        }
+    100% {
+      background-position: 0% 50%;
     }
-    a {
-        color: $white;
-        text-decoration: none;
-    }
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+  }
 }
 
 .send-btn {
-    font-family: inherit;
-    font-size: 20px;
-    background: $gradient;
-    color: white;
-    padding: 0.7em 1em;
-    padding-left: 0.9em;
-    display: flex;
-    align-items: center;
-    border: none;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: all 0.2s;
-    span {
-        display: block;
-        margin-left: 0.3em;
-        transition: all 0.3s ease-in-out;
-    }
-    svg {
-        display: block;
-        transform-origin: center center;
-        transition: transform 0.3s ease-in-out;
-    }
-    &:hover .svg-wrapper {
-        animation: fly-1 0.6s ease-in-out infinite alternate;
-    }
-    &:hover svg {
-        transform: translateX(1.2em) rotate(45deg) scale(1.1);
-    }
-    &:hover span {
-        transform: translateX(5em);
-    }
-    &:active {
-        transform: scale(0.95);
-    }
+  font-family: inherit;
+  font-size: 20px;
+  background: $gradient;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  &:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  &:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  }
+  &:hover span {
+    transform: translateX(5em);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
 }
 
 @keyframes fly-1 {
-    from {
-        transform: translateY(0.1em);
-    }
+  from {
+    transform: translateY(0.1em);
+  }
 
-    to {
-        transform: translateY(-0.1em);
-    }
+  to {
+    transform: translateY(-0.1em);
+  }
 }
 
 .form-btn {
-    color: $white;
-    background-color: $cyan;
-    border: solid 2px;
-    font-weight: $medium;
+  color: $white;
+  background-color: $cyan;
+  border: solid 2px;
+  font-weight: $medium;
 }
 
 .form-s {
-    border: 1px solid #ced4da;
-    border-radius: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
 }
 
 //End Buttons
 
 //Footer
 .a-footer {
-    color: $dark-gray;
+  color: $dark-gray;
+  text-decoration: none;
+  font-weight: $medium;
+  &:hover {
+    color: $lila;
     text-decoration: none;
-    font-weight: $medium;
-    &:hover {
-        color: $lila;
-        text-decoration: none;
-    }
+  }
 }
 
 //Font and Text options
 .underline span {
-    display: inline-block;
-    &::after {
-        content: "";
-        height: 7px;
-        width: 60%;
-        background: $gradient;
-        border-radius: 5px;
-        display: block;
-    }
+  display: inline-block;
+  &::after {
+    content: "";
+    height: 7px;
+    width: 60%;
+    background: $gradient;
+    border-radius: 5px;
+    display: block;
+  }
 }
 
 .g-color {
-    color: $cyan;
-    &:hover {
-        color: $lila;
-    }
+  color: $cyan;
+  &:hover {
+    color: $lila;
+  }
 }
 
 .textCenter {
-    text-align: center;
+  text-align: center;
 }
 
 .icon-w {
-    color: #fff;
+  color: #fff;
 }
 
 //Margin & Padding options
 .section-m {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .m-50 {
-    margin-top: 80px;
-    height: 100px;
+  margin-top: 80px;
+  height: 100px;
 }
 
 .ml {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .pt {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .icon {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 //Image options
 .logo-mini {
-    width: 60%;
-    height: auto;
+  width: 60%;
+  height: auto;
 }
 
 .bg-line {
-    background-image: url(/media/img/details/bg-line.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-image: url(/media/img/details/bg-line.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .logo {
-    display: inline-block;
+  display: inline-block;
 }
 
 //Others
 .topheader {
-    background: $gradient;
-    color: $white;
-    z-index: 99;
-    height: 35px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
+  background: $gradient;
+  color: $white;
+  z-index: 99;
+  height: 35px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
 }
 
 .dropdown-item {
-    display: block;
-    width: 100%;
-    padding: 0.25rem 1.5rem;
-    clear: both;
-    font-weight: $regular;
-    color: $dark;
-    text-align: inherit;
-    white-space: nowrap;
-    background-color: transparent;
-    border: 0;
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: $regular;
+  color: $dark;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
 }
 
 .optionDrop {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  width: 100%;
 }
