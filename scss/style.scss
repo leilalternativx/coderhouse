@@ -1,5 +1,8 @@
 @import "animate.css";
 
+//Color
+$theme: #a88beb, #5de6de, #1a1a1a;
+
 //Theme Color
 $lila: #a88beb;
 $cyan: #5de6de;
@@ -20,6 +23,15 @@ $bold: 800;
 $gradient: linear-gradient(90deg, $lila 0%, $cyan 100%);
 $shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.45);
 
+//Primary color
+$primary: nth($theme, 1);
+
+//mixin
+@mixin sizes ($width, $height) {
+  height: $height;
+  width: $width;
+}
+
 //Basic
 * {
   margin: 0;
@@ -33,7 +45,7 @@ $shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.45);
 }
 
 ::selection {
-  background-color: $lila;
+  background-color: $primary;
 }
 
 html,
@@ -82,24 +94,39 @@ h5 {
   margin-bottom: 0.5rem;
 }
 
+
+$headings:(
+  h1: 3.5rem,
+  h2: 2rem,
+  h3: 1.75rem,
+  h4: 1.5rem,
+  h5: 1.25rem,
+);
+
+$h1: map-get($headings, h1);
+$h2: map-get($headings, h2);
+$h3: map-get($headings, h3);
+$h4: map-get($headings, h4);
+$h5: map-get($headings, h5);
+
 h1 {
-  font-size: 3.5rem;
+  font-size: $h1;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: $h2;
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: $h3;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: $h4;
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: $h5;
 }
 
 p {
@@ -144,8 +171,7 @@ a {
 }
 
 .btn-down {
-  height: 60px;
-  width: 60px;
+  @include sizes(60px, 60px);
   border-radius: 50%;
   border: solid;
   border: 0px;
@@ -230,8 +256,7 @@ a {
     &:nth-child(1) {
       top: 0;
       left: -100%;
-      width: 100%;
-      height: 2px;
+      @include sizes(100%, 2px);
       background: linear-gradient(90deg, transparent, $lila);
     }
   }
@@ -242,8 +267,7 @@ a {
   span:nth-child(3) {
     bottom: 0;
     right: -100%;
-    width: 100%;
-    height: 2px;
+    @include sizes(100%, 2px);
     background: linear-gradient(90deg, transparent, $cyan);
   }
   &:hover span:nth-child(3) {
@@ -254,8 +278,7 @@ a {
   span:nth-child(2) {
     top: -100%;
     right: 0;
-    width: 2px;
-    height: 100%;
+    @include sizes(2px, 100%);
     background: linear-gradient(180deg, transparent, $lila);
   }
   &:hover span:nth-child(2) {
@@ -266,8 +289,7 @@ a {
   span:nth-child(4) {
     bottom: -100%;
     left: 0;
-    width: 2px;
-    height: 100%;
+    @include sizes(2px, 100%);
     background: linear-gradient(360deg, transparent, $cyan);
   }
   &:hover span:nth-child(4) {
@@ -408,8 +430,7 @@ a {
   display: inline-block;
   &::after {
     content: "";
-    height: 7px;
-    width: 60%;
+    @include sizes(60%, 7px);
     background: $gradient;
     border-radius: 5px;
     display: block;
@@ -461,6 +482,10 @@ a {
 
 .bg-line {
   background-image: url(/media/img/details/bg-line.png);
+}
+
+.bg-line--fix{
+  @extend.bg-line;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -499,4 +524,9 @@ a {
   margin-bottom: 10px;
   margin-left: 10px;
   width: 100%;
+}
+
+
+@media (max-width: 991px) {
+  
 }

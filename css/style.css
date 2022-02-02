@@ -1,3 +1,4 @@
+@import url(animate.css);
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +16,8 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
   font-size: 1rem;
-  color: #1a1a1a; }
+  color: #1a1a1a;
+  accent-color: #a88beb; }
 
 footer,
 header,
@@ -169,8 +171,8 @@ a {
     .btn-view span:nth-child(1) {
       top: 0;
       left: -100%;
-      width: 100%;
       height: 2px;
+      width: 100%;
       background: linear-gradient(90deg, transparent, #a88beb); }
   .btn-view:hover span:nth-child(1) {
     left: 100%;
@@ -178,8 +180,8 @@ a {
   .btn-view span:nth-child(3) {
     bottom: 0;
     right: -100%;
-    width: 100%;
     height: 2px;
+    width: 100%;
     background: linear-gradient(90deg, transparent, #5de6de); }
   .btn-view:hover span:nth-child(3) {
     right: 100%;
@@ -188,8 +190,8 @@ a {
   .btn-view span:nth-child(2) {
     top: -100%;
     right: 0;
-    width: 2px;
     height: 100%;
+    width: 2px;
     background: linear-gradient(180deg, transparent, #a88beb); }
   .btn-view:hover span:nth-child(2) {
     top: 100%;
@@ -198,8 +200,8 @@ a {
   .btn-view span:nth-child(4) {
     bottom: -100%;
     left: 0;
-    width: 2px;
     height: 100%;
+    width: 2px;
     background: linear-gradient(360deg, transparent, #5de6de); }
   .btn-view:hover span:nth-child(4) {
     bottom: 100%;
@@ -211,10 +213,7 @@ a {
     color: #bfbfbf;
     box-shadow: 0 0 8px #a88beb, 0 0 8px #5de6de, 0 0 8px #a88beb;
     transition: 0.1s; }
-  .btn-view:active span:nth-child(1)
-span:nth-child(2)
-span:nth-child(2)
-span:nth-child(2) {
+  .btn-view:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-child(2) {
     transition: none;
     transition-delay: none; }
 
@@ -343,8 +342,10 @@ span:nth-child(2) {
   width: 60%;
   height: auto; }
 
-.bg-line {
-  background-image: url(/media/img/details/bg-line.png);
+.bg-line, .bg-line--fix {
+  background-image: url(/media/img/details/bg-line.png); }
+
+.bg-line--fix {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
