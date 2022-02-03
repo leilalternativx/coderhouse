@@ -146,6 +146,14 @@ a {
   text-decoration: none;
   &:hover {
     color: $lila;
+    text-decoration: none;
+  }
+}
+
+.a-white {
+  color: $white;
+  &:hover {
+  color: $cyan;
   }
 }
 
@@ -528,5 +536,7 @@ a {
 
 
 @media (max-width: 991px) {
-  
+  .logo-mini{
+    @include sizes(30%, auto);
+  }
 }

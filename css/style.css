@@ -79,7 +79,13 @@ a {
   color: #5de6de;
   text-decoration: none; }
   a:hover {
-    color: #a88beb; }
+    color: #a88beb;
+    text-decoration: none; }
+
+.a-white {
+  color: #fff; }
+  .a-white:hover {
+    color: #5de6de; }
 
 .btn1 {
   background-color: #5de6de;
@@ -379,3 +385,9 @@ a {
   margin-bottom: 10px;
   margin-left: 10px;
   width: 100%; }
+
+@media (max-width: 991px) {
+  .logo-mini {
+    height: auto;
+    width: 30%;
+    text-align: center; } }
